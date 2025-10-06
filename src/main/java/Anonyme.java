@@ -3,9 +3,6 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class inscrite {
+public class Anonyme {
     private String id;
-    private String nom;
-    private String prenom;
-    private String email;
 }

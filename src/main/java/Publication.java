@@ -1,28 +1,21 @@
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import java.util.List;
 
 @Getter
-
+@AllArgsConstructor
 public class Publication {
-   private String id;
-   private personne auteur;
-   private List<message> messages;
+   private final String id;
+   private final Personne auteur;
+   private final List<Message> messages;
 
-   public Publication(String id, personne auteur){
-       this.id = id;
-       this.auteur = auteur;
-       this.messages = null;
-   }
-
-   public void afficher(){
+   public void afficher() {
        System.out.println(Publication.this);
    }
-
-   public void ajouterMessage(message m){
+   public void ajouterMessage(Message m){
        messages.add(m);
    }
-
 
 }
 

@@ -5,14 +5,14 @@ import java.util.Date;
 
 @Getter
 @AllArgsConstructor
-public class message {
+public class Message {
     private String texte;
     private Date date;
-    private personne auteur;
+    private Personne auteur;
     private String indication;
 
    public void afficher(){
-    System.out.println(message.this);
+    System.out.println(Message.this);
    }
 
 }

@@ -9,22 +9,33 @@ import java.util.List;
 @AllArgsConstructor
 public class NGLTest {
     private String id;
-    private personne auteur;
-    private List<message> messages;
+    private Personne auteur;
+    private List<Message> messages;
 
 
-
-    @BeforeEach
-   public void setUp() {
+    public void setUp() {
         id = "1";
-        auteur = new personne();
-        messages = null;
-        message m = new message("test",null,"test");
+        auteur = new Personne();
+        Message m = new Message("test","2025-09-12","inscrite");
         messages.add(m);
     }
 
     @Test
-   public void test() {
-        System.out.println(id);
+    public void test() {
+     Publication p = new Publication(id,auteur,messages);
+     p.afficher();
     }
+
+    public static void main(String[] args) {
+        NGLTest ngl = new NGLTest("2",null,"Bonjour");
+        ngl.test();
+        System.out.println(ngl);
+
+        NGLTest messagePublic = new NGLTest("3", "Louis", "welcome home");
+        messagePublic.test();
+        System.out.println(messagePublic);
+
+    }
+
+
 }

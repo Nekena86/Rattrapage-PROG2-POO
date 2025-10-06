@@ -3,6 +3,8 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class anonyme {
-    private String id;
+public class Personne {
+    private enum persone{
+        anonyme,inscrit
+    }
 }
