@@ -5,6 +5,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Personne {
     private enum persone{
-        anonyme,inscrit
+        Anonyme,Inscrit
     }
 }

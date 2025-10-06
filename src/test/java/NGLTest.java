@@ -15,7 +15,7 @@ public class NGLTest {
 
     public void setUp() {
         id = "1";
-        auteur = new Personne();
+        auteur = new Personne(Inscrit);
         Message m = new Message("test","2025-09-12","inscrite");
         messages.add(m);
     }
